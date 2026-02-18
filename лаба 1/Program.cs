@@ -19,9 +19,8 @@ Console.WriteLine($"Год издания: {MyBook.Year}");
 Console.WriteLine($"Доступность: {MyBook.IsAvailable}");
 Console.WriteLine($"Статус: {MyBook.Status}");
 
-Console.WriteLine("------------------------------------------ ");
 
-MyBook.TakeBook("Анна Смит");
+
+MyBook.TakeBook("Анна");
 Console.WriteLine($"Статус после взятия: {MyBook.Status}");
 Console.WriteLine($"Доступность: {MyBook.IsAvailable}");
-//
