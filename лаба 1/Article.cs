@@ -4,11 +4,9 @@ namespace лаба_1
 {
     public class Article : EducationalMaterial
     {
-        
         private string journal;
         private int year;
 
-        
         public Article(string title, string author, string journal, int year)
             : base(title, author)
         {
@@ -16,11 +14,10 @@ namespace лаба_1
             Year = year;
         }
 
-        
         public string Journal
         {
             get { return journal; }
-            set { journal = value; }
+            set { journal = value ?? ""; }
         }
 
         public int Year
@@ -35,7 +32,6 @@ namespace лаба_1
             }
         }
 
-        
         public override void ShowBasicInfo()
         {
             base.ShowBasicInfo();
@@ -44,13 +40,12 @@ namespace лаба_1
             Console.WriteLine($"Год: {Year}");
         }
 
-       
         public override void DisplayContent()
         {
-            Console.WriteLine($" Содержание статьи '{Title}'");
+            Console.WriteLine($"=== Содержание статьи '{Title}' ===");
             Console.WriteLine($"Найдите журнал '{Journal}' за {Year} год");
             Console.WriteLine($"Откройте страницу с вашей статьей и прочитайте");
-            
+            Console.WriteLine("================================");
         }
     }
 }

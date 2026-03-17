@@ -4,16 +4,18 @@ namespace лаба_1
 {
     public abstract class EducationalMaterial
     {
+        // Приватные поля
         private string title;
         private string author;
 
-        
+        // Конструктор
         public EducationalMaterial(string title, string author)
         {
             Title = title;
             Author = author;
         }
 
+        // Свойства
         public string Title
         {
             get { return title; }
@@ -38,14 +40,14 @@ namespace лаба_1
             }
         }
 
-        
+        // Виртуальный метод
         public virtual void ShowBasicInfo()
         {
             Console.WriteLine($"Материал: {Title}");
             Console.WriteLine($"Автор: {Author}");
         }
 
-        
+        // Абстрактный метод
         public abstract void DisplayContent();
     }
 }
