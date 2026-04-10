@@ -42,11 +42,11 @@ namespace лаба_1
 
         public override void DisplayContent()
         {
-            Console.WriteLine($"=== Содержание видеокурса '{Title}' ===");
+            Console.WriteLine($" Содержание видеокурса '{Title}' ");
             Console.WriteLine($"Перейдите по ссылке и посмотрите видео:");
             Console.WriteLine($"{Link}");
             Console.WriteLine($"Длительность курса: {Duration / 60} ч {Duration % 60} мин");
-            Console.WriteLine("================================");
+           
         }
     }
 }

@@ -42,10 +42,10 @@ namespace лаба_1
 
         public override void DisplayContent()
         {
-            Console.WriteLine($"=== Содержание статьи '{Title}' ===");
+            Console.WriteLine($" Содержание статьи '{Title}' ");
             Console.WriteLine($"Найдите журнал '{Journal}' за {Year} год");
             Console.WriteLine($"Откройте страницу с вашей статьей и прочитайте");
-            Console.WriteLine("================================");
+           
         }
     }
 }

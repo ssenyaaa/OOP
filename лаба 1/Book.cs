@@ -42,10 +42,10 @@ namespace лаба_1
 
         public override void DisplayContent()
         {
-            Console.WriteLine($"=== Содержание книги '{Title}' ===");
+            Console.WriteLine($" Содержание книги '{Title}' ");
             Console.WriteLine($"Откройте книгу на странице 1 и начните читать...");
             Console.WriteLine($"Всего страниц: {PageCount}");
-            Console.WriteLine("================================");
+            
         }
     }
 }
