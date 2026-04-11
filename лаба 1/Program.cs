@@ -62,7 +62,7 @@ using лаба_1;
             Console.WriteLine("\n КРАТКАЯ ИНФОРМАЦИЯ О СМЕШАННОЙ БИБЛИОТЕКЕ ");
             mixedLibrary.ShowAllBasicInfo();
             
-//перезагрузка
+
             
             Console.WriteLine("\n1. Сравнение книг по страницам ");
             Book b1 = new Book("Книга А", "Автор", 500, "111");
