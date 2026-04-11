@@ -1,4 +1,4 @@
-﻿using System;
+using System;
 
 namespace лаба_1
 {
@@ -47,6 +47,14 @@ namespace лаба_1
             Console.WriteLine($"{Link}");
             Console.WriteLine($"Длительность курса: {Duration / 60} ч {Duration % 60} мин");
            
+        }
+        public static VideoCourse operator ++(VideoCourse video)
+        {
+            if (video is null)
+                throw new ArgumentNullException(nameof(video), "Видеокурс не может быть null");
+
+            video.Duration += 10;
+            return video;
         }
     }
 }
