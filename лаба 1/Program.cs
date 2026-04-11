@@ -61,7 +61,32 @@ using лаба_1;
             
             Console.WriteLine("\n КРАТКАЯ ИНФОРМАЦИЯ О СМЕШАННОЙ БИБЛИОТЕКЕ ");
             mixedLibrary.ShowAllBasicInfo();
+            
+//перезагрузка
+            
+            Console.WriteLine("\n1. Сравнение книг по страницам ");
+            Book b1 = new Book("Книга А", "Автор", 500, "111");
+            Book b2 = new Book("Книга Б", "Автор", 300, "222");
+            Console.WriteLine($"{b1.Title} (500 стр.) > {b2.Title} (300 стр.) = {b1 > b2}");
+            Console.WriteLine($"{b1.Title} (500 стр.) < {b2.Title} (300 стр.) = {b1 < b2}");
+
+            
+            Console.WriteLine("\n2. Увеличение длительности видео ");
+            VideoCourse v = new VideoCourse("Видео", "Автор", 100, "link");
+            Console.WriteLine($"До: {v.Duration} мин");
+            v++;
+            Console.WriteLine($"После ++: {v.Duration} мин");
+
+            
+            Console.WriteLine("\n3. Поиск по автору ");
+            var tolstoy = mixedLibrary.FindByAuthor("Стивен Хокинг");
+            foreach (var m in tolstoy)
+            {
+                Console.WriteLine($"  - {m.Title}");
+            }
 
             Console.WriteLine("\nПрограмма завершена. Нажмите любую клавишу...");
             Console.ReadKey();
+
+           
         

@@ -47,5 +47,34 @@ namespace лаба_1
             Console.WriteLine($"Всего страниц: {PageCount}");
             
         }
+        public static bool operator >(Book book1, Book book2)
+        {
+            if (book1 is null || book2 is null)
+                throw new ArgumentNullException("Книги не могут быть null");
+
+            return book1.PageCount > book2.PageCount;
+        }
+
+        public static bool operator <(Book book1, Book book2)
+        {
+            if (book1 is null || book2 is null)
+                throw new ArgumentNullException("Книги не могут быть null");
+
+            return book1.PageCount < book2.PageCount;
+        }
+
+        
+        public override bool Equals(object obj)
+        {
+            if (obj is Book other)
+                return this.PageCount == other.PageCount;
+            return false;
+        }
+
+        public override int GetHashCode()
+        {
+            return PageCount.GetHashCode();
+        }
     }
-}//
+}
+    
